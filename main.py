@@ -1,4 +1,4 @@
-from movie_app import MovieApp
+from movie_app.movie_app import MovieApp
 from _storage.storage_json import StorageJson
 
 def main():

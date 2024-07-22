@@ -1,5 +1,5 @@
-from istorage import IStorage
-from movie_app import MovieApp
+from storage_interface import IStorage
+from movie_app.movie_app import MovieApp
 import json
 import csv
 

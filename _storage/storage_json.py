@@ -1,10 +1,9 @@
-from istorage import IStorage
-from movie_app.movie_app import MovieApp
+from storage_interface import IStorage
 import json
-from dotenv import load_dotenv
-import os
 import requests
+import os
 import random
+from dotenv import load_dotenv
 
 load_dotenv()
 API_KEY = os.getenv("API_KEY")
@@ -57,11 +56,11 @@ class StorageJson(IStorage):
         else:
             print("Movie doesn't exist")
 
-    def update_movie(self, title, rating):
-        movie_data = self.load_movies_from_api(title)
+    def update_movie(self, title, note):
         if title in self.movies:
-            rating = self.movies[title]["rating"]
-            self.save_movie(title, rating)
+            self.movies[title]["note"] = note
+            self.save_movie(self.movies, title)
+            print(f"Movie {title} successfully updated")
         else:
             print("Movie doesn't exist")
 

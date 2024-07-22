@@ -1,3 +1,4 @@
+from _storage.storage_interface import IStorage
 from _storage.storage_json import StorageJson
 
 class MovieApp:
@@ -26,9 +27,9 @@ class MovieApp:
         self._storage.delete_movie(user_input_delete_movie)
 
     def _command_update_movie(self):
-        user_input_update_movies = str(input("Enter movie name: "))
+        user_input_update_movie = str(input("Enter movie name: "))
         updated_movie_notes = str(input("Enter movie notes to update: "))
-        self._storage.update_movie(user_input_update_movies, updated_movie_notes)
+        self._storage.update_movie(user_input_update_movie, updated_movie_notes)
 
     def _command_movie_stats(self):
         user_input_movies = str(input("Enter movie name: "))
