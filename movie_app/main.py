@@ -1,5 +1,5 @@
 from movie_app import MovieApp
-from storage_json import StorageJson
+from _storage.storage_json import StorageJson
 
 def main():
     storage = StorageJson()

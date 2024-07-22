@@ -1,5 +1,5 @@
 from istorage import IStorage
-from movie_app import MovieApp
+from movie_app.movie_app import MovieApp
 import json
 from dotenv import load_dotenv
 import os
@@ -12,7 +12,7 @@ API_KEY = os.getenv("API_KEY")
 
 class StorageJson(IStorage):
     def __init__(self):
-        self.movies_file_path = "movies.json"
+        self.movies_file_path = "_data/movies.json"
         self.movies = self.load_movies_from_file()
 
     def load_movies_from_file(self):

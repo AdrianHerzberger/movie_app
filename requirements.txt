@@ -1,0 +1,7 @@
+### `requirements.txt`
+
+List of dependencies required by the project.
+
+```text
+requests
+python-dotenv
