@@ -1,4 +1,4 @@
-from storage_interface import IStorage
+from .storage_interface import IStorage
 import json
 import requests
 import os

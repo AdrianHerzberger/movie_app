@@ -1,6 +1,3 @@
-from _storage.storage_interface import IStorage
-from _storage.storage_json import StorageJson
-
 class MovieApp:
     def __init__(self, storage):
         self._storage = storage
